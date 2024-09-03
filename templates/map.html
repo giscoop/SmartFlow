@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Map
+{% endblock %}
+
+{% block main %}
+    <body>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item"><a href="/doc">Documentation</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Simulation</li>
+            </ol>
+          </nav>
+        <div>
+            <h1>Simulation Map</h1>
+        </div>
+        <div id="map"></div>
+        <script>
+            (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+            key: "AIzaSyA9LCmcoBUaRk729m_tL0Jqdi56CyKqXoQ",
+            });
+        </script>
+        <script type="module" src="{{url_for('static', filename='map.js')}}"></script>
+        <div id="ui-form">
+            <form>
+                <div class="row mb-3">
+                    <label for="customRange3" class="form-label" id="time_slider_label">Time Multiplier: 10x</label>
+                    <input type="range" class="form-range" min="1" max="25" step="1" id="timeMultiplier" value="10" tooltip="always">
+                </div>
+                <div class="row mb-3">
+                    <label for="customRange3" class="form-label" id="route_slider_label">Vehicle Multiplier: 1x</label>
+                    <input type="range" class="form-range" min="1" max="25" step="1" id="routeMultiplier" value="1">
+                </div>
+                <div>
+                    <button id="startButton" type="button" class="btn btn-primary" data-bs-toggle="button">Start</button>
+                </div>
+            </form>
+        </div>
+    </body>
+{% endblock %}

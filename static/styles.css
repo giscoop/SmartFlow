@@ -1,0 +1,50 @@
+#map {
+    height: 550px;
+    width: 80%;
+    margin: 0 10% 20px 10%;
+}
+
+
+#ui-form {
+    width: 80%;
+    border: 1px solid gray;
+    background: WhiteSmoke;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 20px auto 20px auto;
+    display: block;
+}
+
+
+h1 {
+    color: black;
+}
+
+h3 {
+    color: black;
+    margin: 20px 10% 20px 10%;
+}
+
+h4 {
+    color: black;
+}
+
+.explanation {
+    color: WhiteSmoke;
+    margin: 50px 10% 20px 10%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 50px;
+    background: WhiteSmoke;
+}
+
+
+p {
+    color: black;
+    text-align: left;
+}
+
+ol {
+    color: black;
+    text-align: left;
+}

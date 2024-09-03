@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+        <li class="breadcrumb-item"><a href="/doc">Documentation</a></li>
+        <li class="breadcrumb-item"><a href="/map">Simulation</a></li>
+        </ol>
+    </nav>
+    <h1>SmartFlow</h1>
+    <h3>This site demonstrates the principles behind SmartFlow, the open-source mapping module for traffic simulation. </h3>
+    <div class="explanation">
+        <h4>Purpose</h4>
+        <p>This site is meant to provide insight into how traffic flow is handled by existing street infrastructure and widely used mapping platforms.  The software behind this site can be downloaded from the Documentation page, and extended for different analytical purposes. </p>
+        <p>On the one hand, the intended use of the project is to assess traffic behaviors under different conditions, which can assist with complex urban planning questions.  As more vehicles enter the roadway in a given area, it is important to be able to determine bottlenecks and areas most likely to experience congestion.  What is likely to happen in the vincinity of a new music venue on the day of it's first show?  How will daily rush-hour traffic in an area be affected by a new high-density apartment development?  If these problematic areas can be predicted, predictions can be compared to observed conditions, and updates to infrastructure over the long term can be planned.  Future updates to the model will include a way to save overall metrics and statistics at specific points of interest, which can be compared to known values obtained through existing traffic detection systems such as underground inductive loop detectors, pneumatic tube detectors, and, increasingly, video detection using AI-powered classification systems.</p>
+        <p>On the other hand, the use of personal navigation systems is a permanent aspect of modern traffic patterns.  Many, if not most, cars on the road are being routed by central navigation planners, like Google Maps, Waze, or Apple Maps.  How do these navigation systems themselves affect traffic?  How can they do a better job of predicting and mitigating traffic, and what are the potential side effects of any changes to routing algorithms?</p>
+        <p></p>
+    </div>
+
+{% endblock %}
